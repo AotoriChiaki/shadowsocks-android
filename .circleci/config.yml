@@ -20,7 +20,7 @@ jobs:
           key: jars-{{ checksum "build.gradle.kts" }}
       - run:
           name: Run Build and Tests
-          command: ./gradlew assembleDebug check -PCARGO_PROFILE=debug
+          command: ./gradlew assembleRelease check -PCARGO_PROFILE=release
       - save_cache:
           paths:
             - ~/.gradle
@@ -32,15 +32,3 @@ jobs:
       - store_artifacts:
           path: tv/build/outputs/apk
           destination: apk/tv
-      - store_artifacts:
-          path: core/build/reports
-          destination: reports/core
-      - store_artifacts:
-          path: mobile/build/reports
-          destination: reports/mobile
-      - store_artifacts:
-          path: plugin/build/reports
-          destination: reports/plugin
-      - store_artifacts:
-          path: tv/build/reports
-          destination: reports/tv
