@@ -1,6 +1,6 @@
 rootProject.extra.apply {
-    set("androidPlugin", "com.android.tools.build:gradle:8.5.2")
-    set("kotlinVersion", "2.0.20")
+    set("androidPlugin", "com.android.tools.build:gradle:8.9.0")
+    set("kotlinVersion", "2.1.10")
 }
 
 repositories {
